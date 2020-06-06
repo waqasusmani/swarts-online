@@ -3,8 +3,11 @@ window.onscroll = function() {changetopbarbgcolor()};
 function changetopbarbgcolor() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("tpbr").style.backgroundColor="black";
-  } else {
+    document.querySelector(".navbar").style.transform="translateX(50%)";
+  } 
+  else {
     document.getElementById("tpbr").style.backgroundColor="";
+    document.querySelector(".navbar").style.transform="translateX(0%)";
   }
 }
 
@@ -38,10 +41,10 @@ function changeDiv(){
   console.log("currentDivId is :" + currentDivId)
   if (prevDivId!=null){
     document.getElementById(prevDivId).style.maxWidth="0px";
-    document.getElementById(prevDivId).style.transform="translateX(1200px)";
+    document.getElementById(prevDivId).style.transform="translateX(1500px)";
     document.getElementById(prevBtnId).style.backgroundColor="powderblue"
   }
-  document.getElementById(currentDivId).style.maxWidth="1050px";
+  document.getElementById(currentDivId).style.maxWidth="1500px";
   document.getElementById(currentDivId).style.transform="translateX(0)";
   document.getElementById(currentBtnId).style.backgroundColor="cornflowerblue"
 }
@@ -50,12 +53,12 @@ function selectDiv(ele) {
   clearInterval(sliderinterval);
   if (currentDivId !== null && currentBtnId != null){
     document.getElementById(currentDivId).style.maxWidth="0px";
-    document.getElementById(currentDivId).style.transform="translateX(1200px)";
+    document.getElementById(currentDivId).style.transform="translateX(1500px)";
     document.getElementById(currentBtnId).style.backgroundColor="powderblue"
   }
   if (prevDivId !== null && prevBtnId != null){
     document.getElementById(prevDivId).style.maxWidth="0px";
-    document.getElementById(prevDivId).style.transform="translateX(1200px)";
+    document.getElementById(prevDivId).style.transform="translateX(1500px)";
     document.getElementById(prevBtnId).style.backgroundColor="powderblue"
   } 
   prevDivId=null;
