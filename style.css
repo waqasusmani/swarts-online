@@ -234,3 +234,21 @@ button a {
 	color: white;
 	font-size: 15pt;
 }
+
+.assurance-main, .internalaudit-main, .software-main {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.softwaretypes {
+	margin-left: 5%;
+}
+
+.about, .team {
+	margin-left: 5%;
+	margin-right:5%
+}
+
+.team h1 {
+	text-align: center;
+}
