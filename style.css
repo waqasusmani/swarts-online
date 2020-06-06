@@ -4,12 +4,41 @@ body {
 	font-family: 'Times New Roman', serif, Helvetica, Times, serif;
 }
 
+.hamburger {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 40px;
+	width: 40px;
+	background-color: powderblue;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 500;
+}
+
+.line {
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 3px;
+	background-color: white;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hamburger :nth-child(1) {
+	margin-top: 10px;
+}
+
 .upperpart {
 	height:100vh;
 	background-image: url('images/2.jpg');
 	background-size: cover;
 	margin-top: -16px;
 }
+
 .topbar {
 	position: fixed;
 	width:100%;
@@ -142,6 +171,10 @@ body {
 	
 }
 
+#chat {
+	margin-left: 100px;
+}
+
 .thirdpart {
 	display:flex;
 	overflow: hidden; 
@@ -174,6 +207,11 @@ body {
 	background-color: powderblue;
 	border-radius: 100%;
 	user-select: none;
+}
+
+.togglebuttons {
+	margin-left: 40%; 
+	margin-top: -75px;
 }
 
 .quicklinks {
@@ -211,9 +249,9 @@ body {
 
 .form input {
 	margin-left: 5%;
-	width: 99.5%;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+	width: 98%;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
 	box-shadow: 5px 5px 5px 0px gold;
 }
 
@@ -251,4 +289,82 @@ button a {
 
 .team h1 {
 	text-align: center;
+}
+
+
+@media screen and (max-width:768px) {
+	
+	.upperpart{
+		height: auto;
+	}
+
+	.logo {
+		margin-left: 0%;
+		margin-top: 3%;
+		height: 50px;
+		width: 50px;
+	}
+
+	.hamburger {
+		display: block;
+		margin-top: 2%;
+	}
+
+	.navright {
+		float: none;
+		width: 100%;
+		display: block;
+	}
+
+	.navbar {
+		position: absolute;
+		top: -20px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		margin-left: 0%;
+		align-items: center;
+		justify-content: center;
+		background-color: black;
+		clip-path: circle(100px at 800px 0px);
+		-webkit-clip-path: circle(100px at 800px 0px);
+		z-index: 100;
+	}
+
+	.navbar.open {
+		clip-path: circle(1000px at 800px 0px);
+		-webkit-clip-path: circle(1000px at 800px 0px);
+	}
+
+	.dropdown-content, .dropdown-content-1 {
+		min-width: auto;
+	}
+	
+	#chat {
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+
+	.form input {
+		margin-left: 5%;
+		width: 70%;
+		padding-bottom: 2px;
+		margin-bottom: 2px;
+		box-shadow: 2px 2px 2px 0px gold;
+	}
+	
+	.form textarea {
+		margin-left: 5%;
+		box-shadow: 5px 5px 5px 0px gold;
+		width: 180px;
+	}
+
+	.form label {
+		font-size: 8pt;
+		padding-left: 10px;
+	}
+
+
+
 }

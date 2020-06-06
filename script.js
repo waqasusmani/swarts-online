@@ -3,11 +3,11 @@ window.onscroll = function() {changetopbarbgcolor()};
 function changetopbarbgcolor() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("tpbr").style.backgroundColor="black";
-    document.querySelector(".navbar").style.transform="translateX(50%)";
+    // document.querySelector(".navbar").style.transform="translateX(50%)";
   } 
   else {
     document.getElementById("tpbr").style.backgroundColor="";
-    document.querySelector(".navbar").style.transform="translateX(0%)";
+    // document.querySelector(".navbar").style.transform="translateX(0%)";
   }
 }
 
@@ -82,3 +82,9 @@ function selectDiv(ele) {
   sliderinterval=setInterval(changeDiv,5000);
 }
 
+const hamburger = document.querySelector(".hamburger");
+const navbar = document.querySelector(".navbar");
+
+hamburger.addEventListener('click',()=>{
+  navbar.classList.toggle("open")
+})
