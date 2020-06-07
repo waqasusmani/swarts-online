@@ -1,12 +1,16 @@
 window.onscroll = function() {changetopbarbgcolor()};
 
 function changetopbarbgcolor() {
+  var elem=document.getElementById("tpbr");
+  //elem class="topbar"
+  elem.className="topbar";
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("tpbr").style.backgroundColor="black";
+    //document.getElementById("tpbr").style.backgroundColor="black";
     // document.querySelector(".navbar").style.transform="translateX(50%)";
+    elem.className=elem.className+" topbar-small";
   } 
   else {
-    document.getElementById("tpbr").style.backgroundColor="";
+    //document.getElementById("tpbr").style.backgroundColor="";
     // document.querySelector(".navbar").style.transform="translateX(0%)";
   }
 }
