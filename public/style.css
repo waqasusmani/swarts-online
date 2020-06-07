@@ -316,6 +316,10 @@ button a {
 		display: block;
 	}
 
+	.navrightinfo :nth-child(1) {
+		font-size: 7vw;
+	}
+
 	.navbar {
 		position: absolute;
 		top: -20px;
@@ -327,14 +331,14 @@ button a {
 		align-items: center;
 		justify-content: center;
 		background-color: black;
-		clip-path: circle(100px at 800px 0px);
-		-webkit-clip-path: circle(100px at 800px 0px);
+		clip-path: circle(100px at 1000px 0px);
+		-webkit-clip-path: circle(100px at 1000px 0px);
 		z-index: 100;
 	}
 
 	.navbar.open {
-		clip-path: circle(1000px at 800px 0px);
-		-webkit-clip-path: circle(1000px at 800px 0px);
+		clip-path: circle(1500px at 1000px 0px);
+		-webkit-clip-path: circle(1500px at 1000px 0px);
 	}
 
 	.dropdown-content, .dropdown-content-1 {
